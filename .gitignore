@@ -1,0 +1,12 @@
+.cache
+.DS_Store
+.env
+.turbo
+*.lcov
+*.log*
+*.tgz
+coverage
+dist
+dist-ssr
+node_modules
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
