@@ -10,6 +10,7 @@
 		"LICENSE",
 		"lib",
 		"index.js",
+		"constants.js",
 		"jest-testing-library.js",
 		"jest.js",
 		"react.js",
