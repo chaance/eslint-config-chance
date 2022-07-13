@@ -1,3 +1,5 @@
+const { ecmaVersion } = require("./constants");
+
 /**
  * @see https://github.com/eslint/eslint/issues/3458
  * @see https://www.npmjs.com/package/@rushstack/eslint-patch
@@ -11,8 +13,10 @@ const settingsReact = require("./lib/settings-react");
 
 module.exports = {
 	parserOptions: {
-		babelOptions: {
-			presets: ["@babel/preset-react"],
+		sourceType: "module",
+		ecmaVersion,
+		ecmaFeatures: {
+			jsx: true,
 		},
 	},
 	plugins: ["react", "react-hooks", "jsx-a11y"],

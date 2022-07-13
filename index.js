@@ -5,24 +5,21 @@
 // @ts-ignore
 require("@rushstack/eslint-patch/modern-module-resolution");
 
+const { ecmaVersion } = require("./constants");
 const rulesCore = require("./lib/rules-core");
 const settingsCore = require("./lib/settings-core");
 
 module.exports = {
-	root: true,
-	parser: "@babel/eslint-parser",
-	plugins: ["import"],
 	env: {
 		browser: true,
-		es6: true,
 		node: true,
-		commonjs: true,
+		[`es${ecmaVersion}`]: true,
 	},
 	parserOptions: {
-		ecmaVersion: 2019,
+		ecmaVersion,
 		sourceType: "module",
-		requireConfigFile: false,
 	},
+	plugins: ["import"],
 	settings: {
 		...settingsCore,
 	},

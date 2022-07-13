@@ -1,3 +1,5 @@
+const { ecmaVersion } = require("./constants");
+
 /**
  * @see https://github.com/eslint/eslint/issues/3458
  * @see https://www.npmjs.com/package/@rushstack/eslint-patch
@@ -14,6 +16,8 @@ module.exports = {
 			extends: ["plugin:import/typescript"],
 			parser: "@typescript-eslint/parser",
 			parserOptions: {
+				sourceType: "module",
+				ecmaVersion,
 				ecmaFeatures: {
 					jsx: true,
 				},
