@@ -1,13 +1,6 @@
 const { ecmaVersion } = require("./constants");
-
-/**
- * @see https://github.com/eslint/eslint/issues/3458
- * @see https://www.npmjs.com/package/@rushstack/eslint-patch
- */
-// @ts-ignore
-require("@rushstack/eslint-patch/modern-module-resolution");
-
 const rulesTypescript = require("./lib/rules-typescript");
+const settingsTypescript = require("./lib/settings-typescript");
 
 module.exports = {
 	overrides: [
@@ -22,6 +15,9 @@ module.exports = {
 					jsx: true,
 				},
 				warnOnUnsupportedTypeScriptVersion: true,
+			},
+			settings: {
+				...settingsTypescript,
 			},
 			plugins: ["@typescript-eslint"],
 			rules: {
