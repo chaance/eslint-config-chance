@@ -1,11 +1,12 @@
 {
 	"name": "eslint-config-chance",
-	"version": "2.0.2",
+	"version": "3.0.0",
 	"type": "commonjs",
 	"main": "./index.js",
 	"sideEffects": false,
 	"license": "MIT",
 	"files": [
+		"CHANGELOG.md",
 		"README.md",
 		"LICENSE",
 		"lib",
@@ -21,6 +22,7 @@
 		"clean": "rm -rf node_modules"
 	},
 	"devDependencies": {
+		"@types/react": "^18.2.21",
 		"@typescript-eslint/eslint-plugin": "^6.5.0",
 		"@typescript-eslint/parser": "^6.5.0",
 		"eslint": "^8.48.0",

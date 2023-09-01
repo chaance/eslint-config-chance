@@ -2,15 +2,23 @@ module.exports = {
 	overrides: [
 		{
 			files: ["react.js?(x)"],
-			extends: ["../react.js"],
+			extends: ["../index.js", "../react.js"],
 		},
 		{
 			files: ["react.tsx"],
-			extends: ["../react.js", "../typescript.js"],
+			extends: ["../index.js", "../react.js", "../typescript.js"],
 		},
 		{
 			files: ["typescript.ts"],
-			extends: ["../typescript.js"],
+			extends: ["../index.js", "../typescript.js"],
+		},
+		{
+			files: ["jest.test.js"],
+			extends: ["../index.js", "../jest.js"],
+		},
+		{
+			files: ["jest.test.ts"],
+			extends: ["../index.js", "../typescript.js", "../jest.js"],
 		},
 	],
 };

@@ -1,0 +1,6 @@
+{
+	"compilerOptions": {
+		// allows us to skip React imports as we assume JSX auto transform is set up
+		"jsx": "react-jsx"
+	}
+}
