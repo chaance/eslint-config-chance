@@ -1,4 +1,4 @@
-const ecmaVersion = 2021;
+const ecmaVersion = 2022;
 
 module.exports = {
 	ecmaVersion,

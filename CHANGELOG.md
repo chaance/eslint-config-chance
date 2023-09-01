@@ -14,3 +14,7 @@
   	}
   }
   ```
+
+## v4.0.0
+
+- **BREAKING:** Update `parserOptions.ecmaVersion` to `2022`
