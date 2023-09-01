@@ -17,4 +17,5 @@
 
 ## v4.0.0
 
+- Disable `no-var` check. I never write it anyway unless I absolutely mean to.
 - **BREAKING:** Update `parserOptions.ecmaVersion` to `2022`
