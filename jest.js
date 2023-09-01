@@ -6,7 +6,7 @@ module.exports = {
 		{
 			files: ["**/__tests__/**/*", "**/*.{spec,test}.*"],
 			env: {
-				"jest/globals": true,
+				"jest/globals": false,
 			},
 			rules: {
 				...rulesJest,
