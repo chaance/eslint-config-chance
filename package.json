@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-chance",
-	"version": "v3.0.0",
+	"version": "3.0.0",
 	"type": "commonjs",
 	"main": "./index.js",
 	"sideEffects": false,
