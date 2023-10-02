@@ -17,5 +17,9 @@
 
 ## v4.0.0
 
-- Disable `no-var` check. I never write it anyway unless I absolutely mean to.
-- **BREAKING:** Update `parserOptions.ecmaVersion` to `2022`
+- Disabled `no-var` check. I never write it anyway unless I absolutely mean to.
+- Disabled `react/require-render-return` check since React 18 allows `undefined` returns in components
+- Downgraded most rules in `chance/testing-library` to warnings
+- **BREAKING:** Updated peer dependency for `eslint-plugin-testing-library` to v6
+- **BREAKING:** Updated `parserOptions.ecmaVersion` to `2022`
+- **BREAKING:** Removed `chance/jest` and `chance/jest-testing-library` rulesets in favor of `chance/vitest`
