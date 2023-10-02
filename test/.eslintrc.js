@@ -13,12 +13,12 @@ module.exports = {
 			extends: ["../index.js", "../typescript.js"],
 		},
 		{
-			files: ["jest.test.js"],
-			extends: ["../index.js", "../jest.js"],
+			files: ["vitest.test.js"],
+			extends: ["../index.js", "../vitest.js"],
 		},
 		{
-			files: ["jest.test.ts"],
-			extends: ["../index.js", "../typescript.js", "../jest.js"],
+			files: ["vitest.test.ts"],
+			extends: ["../index.js", "../typescript.js", "../vitest.js"],
 		},
 	],
 };
