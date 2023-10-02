@@ -5,7 +5,7 @@ export default function () {
 export function BadStyles() {
 	return (
 		<div>
-			{/* WARN react/style-prop-object */}
+			{/* ERROR react/style-prop-object */}
 			<div style="display: none;">Hello</div>
 		</div>
 	);

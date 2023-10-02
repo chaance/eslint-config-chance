@@ -25,7 +25,6 @@
 		"@types/react": "^18.2.23",
 		"@typescript-eslint/eslint-plugin": "^6.7.3",
 		"@typescript-eslint/parser": "^6.7.3",
-		"@typescript-eslint/utils": "^6.7.3",
 		"eslint": "^8.50.0",
 		"eslint-import-resolver-node": "0.3.9",
 		"eslint-import-resolver-typescript": "^3.6.1",
@@ -41,7 +40,33 @@
 		"vitest": "^0.34.6"
 	},
 	"peerDependencies": {
-		"eslint": "^8.14.0"
+		"@typescript-eslint/eslint-plugin": "^6.0.0",
+		"@typescript-eslint/parser": "^6.0.0",
+		"eslint": "^8.14.0",
+		"eslint-plugin-jsx-a11y": "^6.0.0",
+		"eslint-plugin-react": "^7.0.0",
+		"eslint-plugin-react-hooks": "^4.0.0",
+		"eslint-plugin-testing-library": "^6.0.0"
+	},
+	"peerDependenciesMeta": {
+		"@typescript-eslint/eslint-plugin": {
+			"optional": true
+		},
+		"@typescript-eslint/parser": {
+			"optional": true
+		},
+		"eslint-plugin-jsx-a11y": {
+			"optional": true
+		},
+		"eslint-plugin-react": {
+			"optional": true
+		},
+		"eslint-plugin-react-hooks": {
+			"optional": true
+		},
+		"eslint-plugin-testing-library": {
+			"optional": true
+		}
 	},
 	"publishConfig": {
 		"access": "public"
