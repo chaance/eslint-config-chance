@@ -1,4 +1,4 @@
-import { expect, it } from "vitest";
+import { expect, it, describe as vitestDescribe } from "vitest";
 
 // ERROR no-undef
 describe("hello", () => {
@@ -9,4 +9,4 @@ describe("hello", () => {
 });
 
 // WARN vitest/valid-describe-callback
-describe("poop");
+vitestDescribe("poop");
