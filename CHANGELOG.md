@@ -23,3 +23,7 @@
 - **BREAKING:** Updated peer dependency for `eslint-plugin-testing-library` to v6
 - **BREAKING:** Updated `parserOptions.ecmaVersion` to `2022`
 - **BREAKING:** Removed `chance/jest` and `chance/jest-testing-library` rulesets in favor of `chance/vitest`
+
+## v4.0.1
+
+- Expand peer dependency for TypeScript eslint plugins to allow for v7
