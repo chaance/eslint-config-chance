@@ -1,6 +1,5 @@
 const { ecmaVersion } = require("./constants");
 const rulesCore = require("./lib/rules-core");
-const settingsCore = require("./lib/settings-core");
 
 module.exports = {
 	env: {
@@ -11,10 +10,6 @@ module.exports = {
 	parserOptions: {
 		ecmaVersion,
 		sourceType: "module",
-	},
-	plugins: ["import"],
-	settings: {
-		...settingsCore,
 	},
 	rules: {
 		...rulesCore,
