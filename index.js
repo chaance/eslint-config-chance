@@ -1,7 +1,7 @@
-const { ecmaVersion } = require("./constants");
-const rulesCore = require("./lib/rules-core");
+import { ecmaVersion } from "./constants.js";
+import rulesCore from "./lib/rules-core.js";
 
-module.exports = {
+export default {
 	env: {
 		browser: true,
 		node: true,

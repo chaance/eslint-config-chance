@@ -1,8 +1,8 @@
-const { ecmaVersion } = require("./constants");
-const rulesTypescript = require("./lib/rules-typescript");
-const settingsTypescript = require("./lib/settings-typescript");
+import { ecmaVersion } from "./constants.js";
+import rulesTypescript from "./lib/rules-typescript.js";
+import settingsTypescript from "./lib/settings-typescript.js";
 
-module.exports = {
+export default {
 	overrides: [
 		{
 			files: ["**/*.ts?(x)"],

@@ -1,7 +1,7 @@
 {
 	"name": "eslint-config-chance",
 	"version": "5.0.0",
-	"type": "commonjs",
+	"type": "module",
 	"main": "./index.js",
 	"sideEffects": false,
 	"license": "MIT",

@@ -1,9 +1,9 @@
-const { ecmaVersion } = require("./constants");
-const rulesJsxA11y = require("./lib/rules-jsx-a11y");
-const rulesReact = require("./lib/rules-react");
-const settingsReact = require("./lib/settings-react");
+import { ecmaVersion } from "./constants.js";
+import rulesJsxA11y from "./lib/rules-jsx-a11y.js";
+import rulesReact from "./lib/rules-react.js";
+import settingsReact from "./lib/settings-react.js";
 
-module.exports = {
+export default {
 	parserOptions: {
 		sourceType: "module",
 		ecmaVersion,
