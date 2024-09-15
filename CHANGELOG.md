@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.0
+
+Initial release under the name `@chance/eslint`! To upgrade from `eslint-config-chance`, see the CHANGELOG notes for v5.0.0 (beta) below.
+
+---
+
+I updated the package name from `eslint-config-chance` to `@chance/eslint`. The following documents changes to `eslint-config-chance`.
+
 ## v3.0.0
 
 - Updated all dependencies to latest
@@ -27,3 +35,13 @@
 ## v4.0.1
 
 - Expand peer dependency for TypeScript eslint plugins to allow for v7
+
+## v5.0.0 (beta)
+
+- **BREAKING CHANGES**
+  - ESLint peer dependency updated to 9.x.
+  - Migrated to ESLint's flat config format
+    - This effectively means that usage of the entire package has changed. See the README for updated usage instructions.
+  - Package is now ESM only
+  - Removed support for `eslint-plugin-import` and all related rules
+  - Removed support for all Jest-related rules

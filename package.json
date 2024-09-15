@@ -1,70 +1,48 @@
 {
-	"name": "eslint-config-chance",
-	"version": "4.0.1",
-	"type": "commonjs",
-	"main": "./index.js",
+	"name": "@chance/eslint",
+	"version": "1.0.0-beta.0",
+	"type": "module",
+	"main": "./javascript.js",
+	"exports": {
+		".": "./javascript.js",
+		"./javascript": "./javascript.js",
+		"./react": "./react.js",
+		"./typescript": "./typescript.js",
+		"./vitest": "./vitest.js"
+	},
 	"sideEffects": false,
 	"license": "MIT",
-	"files": [
-		"CHANGELOG.md",
-		"README.md",
-		"LICENSE",
-		"lib",
-		"index.js",
-		"constants.js",
-		"vitest.js",
-		"react.js",
-		"typescript.js"
-	],
 	"scripts": {
 		"lint": "TIMING=1 eslint . --fix --ignore-pattern test/**/*",
+		"format": "prettier --write .",
 		"clean": "rm -rf node_modules"
 	},
+	"dependencies": {
+		"@eslint/compat": "^1.1.1",
+		"@typescript-eslint/eslint-plugin": "^8.5.0",
+		"@typescript-eslint/parser": "^8.5.0",
+		"@typescript-eslint/utils": "^8.5.0",
+		"@vitest/eslint-plugin": "^1.1.4",
+		"eslint-plugin-jsx-a11y": "^6.10.0",
+		"eslint-plugin-react": "^7.36.1",
+		"eslint-plugin-react-hooks": "^5.1.0-rc.0",
+		"eslint-plugin-testing-library": "^6.3.0",
+		"globals": "^15.9.0"
+	},
 	"devDependencies": {
-		"@types/react": "^18.2.67",
-		"@typescript-eslint/eslint-plugin": "^7.2.0",
-		"@typescript-eslint/parser": "^7.2.0",
-		"eslint": "^8.57.0",
-		"eslint-import-resolver-node": "0.3.9",
-		"eslint-import-resolver-typescript": "^3.6.1",
-		"eslint-plugin-import": "^2.29.1",
-		"eslint-plugin-jest-dom": "^5.1.0",
-		"eslint-plugin-jsx-a11y": "^6.8.0",
-		"eslint-plugin-react": "^7.34.1",
-		"eslint-plugin-react-hooks": "^4.6.0",
-		"eslint-plugin-testing-library": "^6.2.0",
-		"eslint-plugin-vitest": "^0.3.26",
-		"prettier": "^3.2.5",
-		"typescript": "^5.4.2",
-		"vitest": "^1.4.0"
+		"@types/eslint": "^9.6.1",
+		"@types/react": "^18.3.5",
+		"eslint": "^9.10.0",
+		"prettier": "^3.3.3",
+		"typescript": "^5.6.2",
+		"vitest": "^2.1.1"
 	},
 	"peerDependencies": {
-		"@typescript-eslint/eslint-plugin": "^6.0.0 || ^7.0.0",
-		"@typescript-eslint/parser": "^6.0.0 || ^7.0.0",
-		"eslint": "^8.14.0",
-		"eslint-plugin-jsx-a11y": "^6.0.0",
-		"eslint-plugin-react": "^7.0.0",
-		"eslint-plugin-react-hooks": "^4.0.0",
-		"eslint-plugin-testing-library": "^6.0.0"
+		"eslint": "^9.0.0"
 	},
-	"peerDependenciesMeta": {
-		"@typescript-eslint/eslint-plugin": {
-			"optional": true
-		},
-		"@typescript-eslint/parser": {
-			"optional": true
-		},
-		"eslint-plugin-jsx-a11y": {
-			"optional": true
-		},
-		"eslint-plugin-react": {
-			"optional": true
-		},
-		"eslint-plugin-react-hooks": {
-			"optional": true
-		},
+	"overrides": {
 		"eslint-plugin-testing-library": {
-			"optional": true
+			"eslint": "$eslint"
 		}
 	},
 	"publishConfig": {

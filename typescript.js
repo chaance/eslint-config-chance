@@ -1,28 +1,33 @@
-const { ecmaVersion } = require("./constants");
-const rulesTypescript = require("./lib/rules-typescript");
-const settingsTypescript = require("./lib/settings-typescript");
+import * as tsselintParser from "@typescript-eslint/parser";
+import tseslintPlugin from "@typescript-eslint/eslint-plugin";
+import { ecmaVersion } from "./lib/constants.js";
+import rules from "./lib/rules-typescript.js";
 
-module.exports = {
-	overrides: [
-		{
-			files: ["**/*.ts?(x)"],
-			extends: ["plugin:import/typescript"],
-			parser: "@typescript-eslint/parser",
-			parserOptions: {
-				sourceType: "module",
-				ecmaVersion,
-				ecmaFeatures: {
-					jsx: true,
-				},
-				warnOnUnsupportedTypeScriptVersion: true,
-			},
-			settings: {
-				...settingsTypescript,
-			},
-			plugins: ["@typescript-eslint"],
-			rules: {
-				...rulesTypescript,
-			},
-		},
-	],
+/** @type {import('eslint').Linter.LanguageOptions} */
+export const languageOptions = {
+	sourceType: "module",
+	ecmaVersion,
+	parser: tsselintParser,
+	parserOptions: {
+		warnOnUnsupportedTypeScriptVersion: true,
+		ecmaVersion,
+	},
+};
+
+/** @type {Record<string, import('eslint').ESLint.Plugin>} */
+export const plugins = {
+	"@typescript-eslint": tseslintPlugin,
+};
+
+export { rules };
+
+/** @type {string[]} */
+export const files = ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"];
+
+/** @type {import('eslint').Linter.Config} */
+export const config = {
+	files,
+	languageOptions,
+	plugins,
+	rules,
 };
