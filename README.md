@@ -20,8 +20,8 @@ Extend `chance` and any optional rulesets in `.eslintrc`:
 // (eslint.config.mjs if project is not using ESM)
 import * as js from "eslint-config-chance";
 import * as react from "eslint-config-chance/react";
-import * as typescript from "../typescript.js";
-import * as vitest from "../vitest.js";
+import * as typescript from "eslint-config-chance/typescript";
+import * as vitest from "eslint-config-chance/vitest";
 
 export default [
 	js.config,
