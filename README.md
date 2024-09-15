@@ -5,30 +5,29 @@ Rules for my own shit.
 ## Installation
 
 ```sh
-pnpm add eslint-config-chance eslint@8 eslint-plugin-import@2 eslint-import-resolver-node@0.3 --save-dev
-
-# typescript rules
-pnpm add @typescript-eslint/eslint-plugin@6 @typescript-eslint/parser@6 eslint-import-resolver-typescript@3 --save-dev
-
-# react rules
-pnpm add eslint-plugin-react@7 eslint-plugin-react-hooks@4 eslint-plugin-jsx-a11y@6 --save-dev
-
-# vitest rules
-pnpm add eslint-plugin-vite@0.3 eslint-plugin-jest-dom@5 eslint-plugin-testing-library@6 --save-dev
+# pnpm
+pnpm add eslint-config-chance@latest eslint@9 --save-dev
+# npm
+npm i eslint-config-chance@latest eslint@9 --save-dev
 ```
 
 ## Usage
 
 Extend `chance` and any optional rulesets in `.eslintrc`:
 
-```json
-{
-	"extends": ["chance", "chance/react"]
-}
+```js
+// eslint.config.js
+// (eslint.config.mjs if project is not using ESM)
+import * as js from "eslint-config-chance";
+import * as react from "eslint-config-chance/react";
+import * as typescript from "../typescript.js";
+import * as vitest from "../vitest.js";
+
+export default [
+	js.config,
+	// Optional rulesets
+	typescript.config,
+	react.config,
+	vitest.config,
+];
 ```
-
-## Optional rulesets
-
-- `vitest`
-- `react`
-- `typescript`
