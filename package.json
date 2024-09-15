@@ -1,67 +1,44 @@
 {
 	"name": "eslint-config-chance",
-	"version": "5.0.0",
+	"version": "5.0.0-beta.1",
 	"type": "module",
-	"main": "./index.js",
+	"main": "./javascript.js",
+	"exports": {
+		".": "./javascript.js",
+		"./javascript": "./javascript.js",
+		"./react": "./react.js",
+		"./typescript": "./typescript.js",
+		"./vitest": "./vitest.js"
+	},
 	"sideEffects": false,
 	"license": "MIT",
-	"files": [
-		"CHANGELOG.md",
-		"README.md",
-		"LICENSE",
-		"lib",
-		"index.js",
-		"constants.js",
-		"vitest.js",
-		"react.js",
-		"typescript.js"
-	],
 	"scripts": {
 		"lint": "TIMING=1 eslint . --fix --ignore-pattern test/**/*",
+		"format": "prettier --write .",
 		"clean": "rm -rf node_modules"
 	},
-	"devDependencies": {
-		"@types/react": "^18.3.5",
+	"dependencies": {
+		"@eslint/compat": "^1.1.1",
 		"@typescript-eslint/eslint-plugin": "^8.5.0",
 		"@typescript-eslint/parser": "^8.5.0",
-		"eslint": "^9.10.0",
+		"@typescript-eslint/utils": "^8.5.0",
+		"@vitest/eslint-plugin": "^1.1.4",
 		"eslint-plugin-jsx-a11y": "^6.10.0",
 		"eslint-plugin-react": "^7.36.1",
-		"eslint-plugin-react-hooks": "^4.6.2",
+		"eslint-plugin-react-hooks": "^5.1.0-rc.0",
 		"eslint-plugin-testing-library": "^6.3.0",
-		"eslint-plugin-vitest": "^0.5.4",
+		"globals": "^15.9.0"
+	},
+	"devDependencies": {
+		"@types/eslint": "^9.6.1",
+		"@types/react": "^18.3.5",
+		"eslint": "^9.10.0",
 		"prettier": "^3.3.3",
 		"typescript": "^5.6.2",
 		"vitest": "^2.1.1"
 	},
 	"peerDependencies": {
-		"@typescript-eslint/eslint-plugin": "^8.0.0",
-		"@typescript-eslint/parser": "^8.0.0",
-		"eslint": "^9.0.0",
-		"eslint-plugin-jsx-a11y": "^6.0.0",
-		"eslint-plugin-react": "^7.0.0",
-		"eslint-plugin-react-hooks": "^4.0.0",
-		"eslint-plugin-testing-library": "^6.0.0"
-	},
-	"peerDependenciesMeta": {
-		"@typescript-eslint/eslint-plugin": {
-			"optional": true
-		},
-		"@typescript-eslint/parser": {
-			"optional": true
-		},
-		"eslint-plugin-jsx-a11y": {
-			"optional": true
-		},
-		"eslint-plugin-react": {
-			"optional": true
-		},
-		"eslint-plugin-react-hooks": {
-			"optional": true
-		},
-		"eslint-plugin-testing-library": {
-			"optional": true
-		}
+		"eslint": "^9.0.0"
 	},
 	"publishConfig": {
 		"access": "public"
