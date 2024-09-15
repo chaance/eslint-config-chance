@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-chance",
-	"version": "5.0.0-beta.1",
+	"version": "5.0.0-beta.2",
 	"type": "module",
 	"main": "./javascript.js",
 	"exports": {
@@ -39,6 +39,11 @@
 	},
 	"peerDependencies": {
 		"eslint": "^9.0.0"
+	},
+	"overrides": {
+		"eslint-plugin-testing-library": {
+			"eslint": "$eslint"
+		}
 	},
 	"publishConfig": {
 		"access": "public"
