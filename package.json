@@ -1,6 +1,6 @@
 {
-	"name": "eslint-config-chance",
-	"version": "5.0.0-beta.2",
+	"name": "@chance/eslint",
+	"version": "1.0.0-beta.0",
 	"type": "module",
 	"main": "./javascript.js",
 	"exports": {

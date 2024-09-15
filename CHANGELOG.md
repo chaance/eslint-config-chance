@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.0
+
+Initial release under the name `@chance/eslint-config`! To upgrade from `eslint-config-chance`, see the CHANGELOG notes for v5.0.0 (beta) below.
+
+---
+
+I updated the package name from `eslint-config-chance` to `@chance/eslint`. The following documents changes to `eslint-config-chance`.
+
 ## v3.0.0
 
 - Updated all dependencies to latest
@@ -28,7 +36,7 @@
 
 - Expand peer dependency for TypeScript eslint plugins to allow for v7
 
-## v5.0.0
+## v5.0.0 (beta)
 
 - **BREAKING CHANGES**
   - ESLint peer dependency updated to 9.x.
