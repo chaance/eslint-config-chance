@@ -2,7 +2,7 @@
 
 ## v1.0.0
 
-Initial release under the name `@chance/eslint-config`! To upgrade from `eslint-config-chance`, see the CHANGELOG notes for v5.0.0 (beta) below.
+Initial release under the name `@chance/eslint`! To upgrade from `eslint-config-chance`, see the CHANGELOG notes for v5.0.0 (beta) below.
 
 ---
 
