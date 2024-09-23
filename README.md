@@ -13,7 +13,7 @@ npm i @chance/eslint eslint@9 --save-dev
 
 ## Usage
 
-Extend `chance` and any optional rulesets in `.eslintrc`:
+Extend `chance` and any optional rulesets in your `eslint.config.js`:
 
 ```js
 // eslint.config.js
