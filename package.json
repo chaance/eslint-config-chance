@@ -18,24 +18,24 @@
 		"clean": "rm -rf node_modules"
 	},
 	"dependencies": {
-		"@eslint/compat": "^1.1.1",
-		"@typescript-eslint/eslint-plugin": "^8.6.0",
-		"@typescript-eslint/parser": "^8.6.0",
-		"@typescript-eslint/utils": "^8.6.0",
-		"@vitest/eslint-plugin": "^1.1.4",
-		"eslint-plugin-jsx-a11y": "^6.10.0",
-		"eslint-plugin-react": "^7.36.1",
-		"eslint-plugin-react-hooks": "^5.1.0-rc.0",
-		"eslint-plugin-testing-library": "^6.3.0",
-		"globals": "^15.9.0"
+		"@eslint/compat": "^1.2.3",
+		"@typescript-eslint/eslint-plugin": "^8.16.0",
+		"@typescript-eslint/parser": "^8.16.0",
+		"@typescript-eslint/utils": "^8.16.0",
+		"@vitest/eslint-plugin": "^1.1.11",
+		"eslint-plugin-jsx-a11y": "^6.10.2",
+		"eslint-plugin-react": "^7.37.2",
+		"eslint-plugin-react-hooks": "^5.1.0-rc.1",
+		"eslint-plugin-testing-library": "^7.0.0",
+		"globals": "^15.12.0"
 	},
 	"devDependencies": {
 		"@types/eslint": "^9.6.1",
-		"@types/react": "^18.3.8",
-		"eslint": "^9.11.0",
-		"prettier": "^3.3.3",
+		"@types/react": "^18.3.12",
+		"eslint": "^9.15.0",
+		"prettier": "^3.4.1",
 		"typescript": "^5.6.2",
-		"vitest": "^2.1.1"
+		"vitest": "^2.1.6"
 	},
 	"peerDependencies": {
 		"eslint": "^9.0.0"
