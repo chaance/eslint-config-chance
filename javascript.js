@@ -1,3 +1,4 @@
+// @ts-check
 import globals from "globals";
 import { ecmaVersion } from "./lib/constants.js";
 import rules from "./lib/rules-core.js";
@@ -16,7 +17,10 @@ export const files = [
 	"**/*.cts",
 ];
 
-/** @type {import('eslint').Linter.LanguageOptions} */
+/**
+ * @type {import('eslint').Linter.LanguageOptions}
+ * @deprecated
+ */
 export const languageOptions = {
 	sourceType: "module",
 	ecmaVersion,
@@ -28,9 +32,41 @@ export const languageOptions = {
 	},
 };
 
-/** @type {import('eslint').Linter.Config} */
+/**
+ * @type {import('eslint').Linter.Config}
+ * @deprecated
+ */
 export const config = {
 	files,
 	languageOptions,
 	rules,
 };
+
+/**
+ * @param {import('eslint').Linter.Globals} [globals]
+ * @returns {import('eslint').Linter.LanguageOptions}
+ */
+export function getLanguageOptions(globals) {
+	return {
+		sourceType: "module",
+		ecmaVersion,
+		globals,
+		parserOptions: {
+			ecmaFeatures: {
+				jsx: true,
+			},
+		},
+	};
+}
+
+/**
+ * @param {import('eslint').Linter.Globals} [globals]
+ * @returns {import('eslint').Linter.Config}
+ */
+export function getConfig(globals) {
+	return {
+		files,
+		languageOptions: getLanguageOptions(globals),
+		rules,
+	};
+}
