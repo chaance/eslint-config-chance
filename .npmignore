@@ -1,2 +1,5 @@
 test/**/*
 pnpm-lock.yaml
+eslint.config.js
+.editorconfig
+.prettierignore
