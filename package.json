@@ -3,6 +3,7 @@
 	"version": "1.0.0-beta.7",
 	"type": "module",
 	"main": "./javascript.js",
+	"module": "./javascript.js",
 	"exports": {
 		".": "./javascript.js",
 		"./javascript": "./javascript.js",
@@ -13,7 +14,7 @@
 	"sideEffects": false,
 	"license": "MIT",
 	"scripts": {
-		"lint": "TIMING=1 eslint . --fix --ignore-pattern test/**/*",
+		"lint": "eslint . --fix --ignore-pattern test/**/*",
 		"format": "prettier --write .",
 		"clean": "rm -rf node_modules"
 	},
@@ -47,5 +48,6 @@
 	},
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"packageManager": "pnpm@9.0.6+sha512.f6d863130973207cb7a336d6b439a242a26ac8068077df530d6a86069419853dc1ffe64029ec594a9c505a3a410d19643c870aba6776330f5cfddcf10a9c1617"
 }
