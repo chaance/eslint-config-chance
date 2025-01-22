@@ -6,10 +6,7 @@
 	"module": "./javascript.js",
 	"exports": {
 		".": "./javascript.js",
-		"./javascript": "./javascript.js",
-		"./react": "./react.js",
-		"./typescript": "./typescript.js",
-		"./vitest": "./vitest.js"
+		"./*": "./*.js"
 	},
 	"sideEffects": false,
 	"license": "MIT",
